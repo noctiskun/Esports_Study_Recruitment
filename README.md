@@ -1,14 +1,14 @@
 # Esports Configuration Study - Recruitment Page
 
-**Professional recruitment landing page for esports configuration research study**
+**Recruitment landing page for esports configuration research study**
 
-🎓 NC State University Visual Experience Lab | IRB #25527
+**NC State University Visual Experience Lab | IRB #25527**
 
-### Survey Link:
+## Survey Link:
 `https://ncsu.qualtrics.com/jfe/form/SV_3W8KwkVMOjMmzOu`
 
 
-## 📧 Contact
+## Contact:
 
 **Study Contact:** Ashish Rajpurohit  
 **Email:** arajpur@ncsu.edu  
