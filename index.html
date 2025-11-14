@@ -109,6 +109,7 @@
             display: flex;
             justify-content: center;
             gap: 2em;
+            flex-wrap: wrap;
         }
 
         #nav a {
@@ -116,6 +117,7 @@
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
+            white-space: nowrap;
         }
 
         #nav a:hover {
@@ -176,6 +178,7 @@
         ul.checklist li {
             padding: 0.5em 0 0.5em 2em;
             position: relative;
+            font-size: 1.1em;
         }
 
         ul.checklist li:before {
@@ -200,6 +203,32 @@
             border-color: #4ecdc4;
         }
 
+        .box.incentive {
+            background: #fff9e6;
+            border-color: #ffc107;
+        }
+
+        /* System Info Grid */
+        .system-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5em;
+            margin: 2em 0;
+        }
+
+        .system-box {
+            background: #f5f5f5;
+            padding: 2em;
+            border-left: 4px solid #4ecdc4;
+            border-radius: 4px;
+        }
+
+        .system-box h4 {
+            margin-bottom: 0.5em;
+            color: #333;
+            font-size: 1.2em;
+        }
+
         /* Footer */
         #footer {
             background: #333;
@@ -219,7 +248,8 @@
             #header p { font-size: 1.2em; }
             h2 { font-size: 1.5em; }
             section { padding: 3em 0; }
-            #nav ul { flex-direction: column; gap: 1em; align-items: center; }
+            #nav ul { gap: 1em; padding: 0 1em; }
+            #nav a { font-size: 0.9em; }
         }
     </style>
 </head>
@@ -228,10 +258,12 @@
     <!-- Navigation -->
     <nav id="nav">
         <ul>
-            <li><a href="#one">About</a></li>
-            <li><a href="#two">Games</a></li>
-            <li><a href="#three">Requirements</a></li>
-            <li><a href="#four">Participate</a></li>
+            <li><a href="#aim">What is Our Aim?</a></li>
+            <li><a href="#games">Games We're Studying</a></li>
+            <li><a href="#requirements">What Do You Need?</a></li>
+            <li><a href="#system-info">System Information Options</a></li>
+            <li><a href="#incentive">Incentive</a></li>
+            <li><a href="#participate">Ready to Participate?</a></li>
         </ul>
     </nav>
 
@@ -244,13 +276,13 @@
         </div>
     </section>
 
-    <!-- One -->
-    <section id="one">
+    <!-- What is Our Aim? -->
+    <section id="aim">
         <div class="container">
             <h2>What is Our Aim?</h2>
             <p style="font-size: 1.2em; margin-bottom: 2em;">
                 We're looking for participants in an esports research experiment. If you play any esports games 
-                either competitively or casually, you are eligible for this survey! We'll ask you a few questions about the 
+                either competitively or casually, you are eligible for this survey! We'll ask you about the 
                 games you play, how you configure your settings, and your preferences for visual quality vs. performance.
             </p>
 
@@ -269,8 +301,8 @@
         </div>
     </section>
 
-    <!-- Two -->
-    <section id="two" class="alt">
+    <!-- Games We're Studying -->
+    <section id="games" class="alt">
         <div class="container">
             <h2>Games We're Studying</h2>
             <p style="font-size: 1.1em; margin-bottom: 2em;">
@@ -295,53 +327,67 @@
         </div>
     </section>
 
-    <!-- Three -->
-    <section id="three">
+    <!-- What Do You Need? -->
+    <section id="requirements">
         <div class="container">
             <h2>What Do You Need?</h2>
             
             <div class="box highlight">
-                <h3>✓ Quick Summary</h3>
                 <ul class="checklist">
                     <li>Must be 18+ years old</li>
                     <li>Play at least one esports game listed above either competitively or casually</li>
-                    <li>Play on PC</li>
+                    <li>Play the game on your PC and ensure that the game you want to answer the question about is installed. This will allow you to upload the configuration files for that game, which will earn you an additional entry into the raffle.</li>
+                    <li>Commitment of at least 8 minutes per section for each game you choose to provide details about</li>
                 </ul>
             </div>
-
-            <h3 style="margin-top: 3em;">System Information Options</h3>
-            <p style="margin-bottom: 1.5em;">
-                We offer several easy ways to provide your hardware specifications (all optional):
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5em;">
-                <div class="box">
-                    <strong>Our Custom Tool</strong><br>
-                    Simple one-click collection
-                </div>
-                <div class="box">
-                    <strong>Steam</strong><br>
-                    Export from Steam settings
-                </div>
-                <div class="box">
-                    <strong>GeForce Experience</strong><br>
-                    For NVIDIA GPU users
-                </div>
-                <div class="box">
-                    <strong>Manual Entry</strong><br>
-                    Type it in yourself
-                </div>
-            </div>
-            
-            <p style="margin-top: 2em; padding: 1.5em; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
-                <strong>Incentive:</strong> Participants have a chance to win $100 digital gift cards (or equivalent in local currency) 
-                through a raffle. Uploading game configuration files will give you an entry into an additional raffle, 
-                increasing your chances to win!
-            </p>
         </div>
     </section>
 
-    <!-- Four -->
-    <section id="four" class="alt">
+    <!-- System Information Options -->
+    <section id="system-info" class="alt">
+        <div class="container">
+            <h2>System Information Options</h2>
+            <p style="font-size: 1.1em; margin-bottom: 2em;">
+                We offer several easy ways to provide your hardware specifications (all optional):
+            </p>
+            <div class="system-info-grid">
+                <div class="system-box">
+                    <h4>Our Custom Tool</h4>
+                    <p>Simple one-click collection</p>
+                </div>
+                <div class="system-box">
+                    <h4>Steam</h4>
+                    <p>Export from Steam settings</p>
+                </div>
+                <div class="system-box">
+                    <h4>GeForce Experience</h4>
+                    <p>For NVIDIA GPU users</p>
+                </div>
+                <div class="system-box">
+                    <h4>Manual Entry</h4>
+                    <p>Type it in yourself</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Incentive -->
+    <section id="incentive">
+        <div class="container">
+            <h2>Incentive</h2>
+            
+            <div class="box incentive">
+                <p style="font-size: 1.1em;">
+                    <strong>Participants have a chance to win $100 digital gift cards</strong> (or equivalent in local currency) 
+                    through a raffle. Uploading game configuration files will give you an entry into an additional raffle, 
+                    increasing your chances to win!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Participate? -->
+    <section id="participate" class="alt">
         <div class="container">
             <h2>Ready to Participate?</h2>
 
